@@ -10,5 +10,6 @@ while validType == False or validNumber == False:
             validType=True
             validNumber=True
     except:
-        print ("not valid, please try again")
+        print ("not valid, please try again") 
 
+"test"
