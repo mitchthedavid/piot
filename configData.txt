@@ -1,1 +1,1 @@
-{"sensors": [{"type": "boolean", "number": 4}]}
+{"sensors": [{"type": "boolean", "number": 3}]}
