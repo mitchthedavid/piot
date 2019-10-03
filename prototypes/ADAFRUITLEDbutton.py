@@ -22,13 +22,13 @@ print("connected.")
 while True: # Run forever
     if GPIO.input(7) == GPIO.LOW:
         GPIO.output(8, GPIO.HIGH) # Turn on
-        aio.send(digital.key, 0)
+        #aio.send(digital.key, 0)
 
     if GPIO.input(7) == GPIO.HIGH:
         GPIO.output(8, GPIO.LOW)
         aio.send(digital.key, 1)
 
-    time.sleep(1)
+    time.sleep(10)
 		
 		
 	
