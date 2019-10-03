@@ -10,7 +10,7 @@ ADAFRUIT_IO_KEY = "0130d211fc4d4fe9a1f6caa69b350f7d"
 
 # Create an instance of the REST client.
 aio = Client(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
-digital = aio.feeds('button1')
+digital = aio.feeds('sensor1')
 
 GPIO.setwarnings(False) # Ignore warning for now
 GPIO.setmode(GPIO.BOARD) # Use physical pin numbering
