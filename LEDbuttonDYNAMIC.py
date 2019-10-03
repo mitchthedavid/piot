@@ -54,5 +54,6 @@ while True: # Run forever
 		aio.send(digital.key, 0)
 	else:
 		aio.send(digital.key, 1)
+		GPIO.output(outPins[i], GPIO.LOW) # Turn off
 
 	time.sleep(5)
