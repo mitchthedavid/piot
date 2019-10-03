@@ -18,6 +18,8 @@ while validType == False or validNumber == False:
     except:
         print ("not valid, please try again") 
 
+
+adafruitUser=input("Please enter your Adafruit username: ")
 adafruitKey=input("Please enter your Adafruit IO key: ")
 
 sensorConfigData={}
@@ -26,7 +28,7 @@ sensorConfigData['sensors'].append({'type': 'boolean','number': numSensors})
 
 adafruitConfigData={}
 adafruitConfigData['adafruitInfo']=[]
-adafruitConfigData['adafruitInfo'].append({'user': username, 'key': adafruitKey})
+adafruitConfigData['adafruitInfo'].append({'user': adafruitUser, 'key': adafruitKey})
 try:
     os.remove('configData.txt')
     os.remove('adafruitData.txt')

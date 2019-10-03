@@ -1,1 +1,1 @@
-{"adafruitInfo": [{"user": "mitch", "key": "test"}]}
+{"adafruitInfo": [{"user": "mitchdavid", "key": "0130d211fc4d4fe9a1f6caa69b350f7d"}]}
