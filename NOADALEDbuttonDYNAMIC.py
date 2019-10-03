@@ -52,9 +52,9 @@ while True: # Run forever
 		digital = aio.feeds('piot.sensor'+str(i+1))
 		if GPIO.input(inPins[i]) == GPIO.LOW:
 			GPIO.output(outPins[i], GPIO.HIGH) # Turn on
-			aio.send(digital.key, 0)
+			#aio.send(digital.key, 0)
 		else:
 			aio.send(digital.key, 1)
-			GPIO.output(outPins[i], GPIO.LOW) # Turn off
+			#GPIO.output(outPins[i], GPIO.LOW) # Turn off
 
 	time.sleep(5)
