@@ -37,9 +37,11 @@ GPIO.setwarnings(False) # Ignore warning for now
 GPIO.setmode(GPIO.BOARD) # Use physical pin numbering
 for i in range(0, numSensors):
 	print("initializing sensor " +str(i+1) + " to pin " +str(inPins[i]))
-	GPIO.setup(inPins[i], GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #initialize sensor pin
+	
 	print("initializing indicator " +str(i+1) + " to pin " +str(outPins[i])+"\n\n")
-	GPIO.setup(outPins[i], GPIO.OUT, initial=GPIO.HIGH) #initalize output pin
+	
+GPIO.setup(inPins[0:numSensors], GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #initialize sensor pin
+GPIO.setup(outPins[0:numSensors], GPIO.OUT, initial=GPIO.HIGH) #initalize output pin
 
 #start listening for input
 
