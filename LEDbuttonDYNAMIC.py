@@ -46,7 +46,7 @@ for i in range(0, numSensors):
 while True: # Run forever
     
 	for i in range (1, numSensors+1):
-		digital = aio.feeds('sensor'+str(i))
+		digital = aio.feeds('piot.sensor'+str(i))
 	if GPIO.input(inPins[i]) == GPIO.LOW:
 		GPIO.output(outPins[i], GPIO.HIGH) # Turn on
 		aio.send(digital.key, 0)
