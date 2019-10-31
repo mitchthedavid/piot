@@ -22,11 +22,11 @@ key=adafruitConfigData['adafruitInfo'][0]['key']
 
 print("connecting to adafruit")
 # import Adafruit IO REST client.
-from Adafruit_IO import Client, Feed, RequestError
+#from Adafruit_IO import Client, Feed, RequestError
 
 # Create an instance of the REST client.
-aio = Client(username,key)
-print("connected to adafruit...")
+#aio = Client(username,key)
+print("listening...")
 
 
 #get number of sensors from config file
@@ -49,12 +49,12 @@ print("starting listening for sensor input")
 while True: # Run forever
     
 	for i in range (0, numSensors):
-		digital = aio.feeds('piot.sensor'+str(i+1))
+		#digital = aio.feeds('piot.sensor'+str(i+1))
 		if GPIO.input(inPins[i]) == GPIO.LOW:
 			GPIO.output(outPins[i], GPIO.HIGH) # Turn on
 			#aio.send(digital.key, 0)
 		else:
-			aio.send(digital.key, 1)
-			#GPIO.output(outPins[i], GPIO.LOW) # Turn off
+			#aio.send(digital.key, 1)
+			GPIO.output(outPins[i], GPIO.LOW) # Turn off
 
-	time.sleep(5)
+	#time.sleep(5)
