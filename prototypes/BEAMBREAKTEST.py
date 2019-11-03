@@ -39,5 +39,5 @@ while True: # Run forever
     #counter+=1
     #if counter%50 == 0:
         #clear()    
-    time.sleep(2)
-    clear()
+    #time.sleep(2)
+    #clear()
