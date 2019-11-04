@@ -56,9 +56,9 @@ while True: # Run forever
 			if GPIO.input(inPins[i]) == GPIO.LOW:
 				GPIO.output(outPins[i], GPIO.LOW) # Turn on
 				aio.send(digital.key, 1)
-	else:
-		aio.send(digital.key, 0)
-		GPIO.output(outPins[i], GPIO.HIGH) # Turn off
+			else:
+				aio.send(digital.key, 0)
+				GPIO.output(outPins[i], GPIO.HIGH) # Turn off
 		except Exception,e:
 			file = open("errors.txt", 'w')
 			file.write(e+''+str(datetime.now())
