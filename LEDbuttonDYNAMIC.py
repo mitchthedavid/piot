@@ -50,18 +50,18 @@ GPIO.setup(outPins[0:numSensors], GPIO.OUT, initial=GPIO.HIGH) #initalize output
 os.system('pinout')
 print("starting listening for sensor input")
 while True: # Run forever
-try:
-	for i in range (0, numSensors):
-		digital = aio.feeds('piot.sensor'+str(i+1))
-		if GPIO.input(inPins[i]) == GPIO.LOW:
-			GPIO.output(outPins[i], GPIO.LOW) # Turn on
-			aio.send(digital.key, 1)
-else:
-	aio.send(digital.key, 0)
-	GPIO.output(outPins[i], GPIO.HIGH) # Turn off
-	except Exception,e:
-		file = open("errors.txt", 'w')
-		file.write(e+''+str(datetime.now())
-		file.close
+	try:
+		for i in range (0, numSensors):
+			digital = aio.feeds('piot.sensor'+str(i+1))
+			if GPIO.input(inPins[i]) == GPIO.LOW:
+				GPIO.output(outPins[i], GPIO.LOW) # Turn on
+				aio.send(digital.key, 1)
+	else:
+		aio.send(digital.key, 0)
+		GPIO.output(outPins[i], GPIO.HIGH) # Turn off
+		except Exception,e:
+			file = open("errors.txt", 'w')
+			file.write(e+''+str(datetime.now())
+			file.close
 
 time.sleep(5)
