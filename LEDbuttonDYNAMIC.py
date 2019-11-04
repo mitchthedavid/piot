@@ -59,9 +59,9 @@ while True: # Run forever
 			else:
 				aio.send(digital.key, 0)
 				GPIO.output(outPins[i], GPIO.HIGH) # Turn off
-		except Exception,e:
-			file = open("errors.txt", 'w')
-			file.write(e+''+str(datetime.now())
-			file.close
+	except Exception as e:
+		file = open("errors.txt", 'w')
+		file.write(e+''+str(datetime.now())
+		file.close()
 
 time.sleep(5)
