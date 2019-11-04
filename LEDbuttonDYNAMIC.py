@@ -2,6 +2,7 @@
 import RPi.GPIO as GPIO # Import Raspberry Pi GPIO library
 import json
 import time
+import os
 from datetime import datetime
 
 inPins=[7,11,13,15,19,21,23]
