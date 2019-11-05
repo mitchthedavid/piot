@@ -1,1 +1,0 @@
-{"adafruitInfo": [{"user": "mitchdavid", "key": "cf6997f0265e4fc9b91b8e875b338a05"}]}

@@ -30,16 +30,16 @@ adafruitConfigData={}
 adafruitConfigData['adafruitInfo']=[]
 adafruitConfigData['adafruitInfo'].append({'user': adafruitUser, 'key': adafruitKey})
 try:
-    os.remove('configData.txt')
-    os.remove('adafruitData.txt')
+    os.remove('./data/configData.json')
+    os.remove('./data/adafruitCredentials.json')
     print ("old config file found....")
     print ("overwriting...")
 except:
     print ("no config file found....")
     print ("creating new config file...")
 
-with open('configData.txt','w') as outfile:
+with open('./data/configData.json','w') as outfile:
     json.dump(sensorConfigData, outfile)
 
-with open('adafruitData.txt','w') as outfile:
+with open('./data/adafruitCredentials.json','w') as outfile:
     json.dump(adafruitConfigData, outfile)

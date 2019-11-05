@@ -8,9 +8,9 @@ from datetime import datetime
 inPins=[7,11,13,15,19,21,23]
 outPins=[8,10,12,14,16,18,22]
 try:
-	with open('configData.txt') as json_file:
+	with open('./data/configData.json') as json_file:
 		sensorConfigData=json.load(json_file)
-	with open('adafruitData.txt') as json_file:
+	with open('./data/adafruitCredentials.json') as json_file:
 		adafruitConfigData=json.load(json_file)
 except:
 		print("no config data found...\nexiting....")
@@ -61,7 +61,7 @@ while True: # Run forever
 				aio.send(digital.key, 0)
 				GPIO.output(outPins[i], GPIO.HIGH) # Turn off
 	except Exception as e:
-		file = open("errors.txt", 'w')
+		file = open("errors.json", 'w')
 		file.write(e+''+str(datetime.now()))
 		file.close()
 
