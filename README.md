@@ -1,8 +1,5 @@
 # piot
- debian package for streamlining the use of an rpi as an IoT device for data collection and monitoring
-
-#should be able to pass array of packages to statement in loop
-
+series of scripts for streamlining the use of an rpi as an IoT device for data collection and monitoring
 
 #GPIO SUPPORT, PYTHON ESSENTIALS, ADAFRUIT
 sudo apt update && sudo apt-get install -y git python3-pip python3
