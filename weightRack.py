@@ -66,4 +66,4 @@ while True: # Run forever
 		file.write(str(e))
 		file.close()
 
-time.sleep(5)
+#time.sleep(5)
