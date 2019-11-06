@@ -1,10 +1,20 @@
+
+
+#install dependencies
+import os
+""" os.('sudo apt-get install -y git python3-pip python3-gpiozero adafruit-io')
+os.('pip3 install python3-gpiozero adafruit-io') """
+
 validType=False
 validNumber=False
 
 maxSensors=25
 
+
+
+
 import json
-import os
+
 import getpass
 username = getpass.getuser()
 
