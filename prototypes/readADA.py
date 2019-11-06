@@ -1,5 +1,8 @@
 import json
 import requests
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
 
 
 try:
@@ -56,7 +59,20 @@ for point in sensor1data:
 	timestamps.append(point['created_at'])
 	
 
-print (values,timestamps)
+#print (values,timestamps)
+# Data for plotting
+t = np.arange(0.0, 2.0, 0.01)
+s = 1 + np.sin(2 * np.pi * t)
+
+fig, ax = plt.subplots()
+ax.plot(timestamps, values)
+
+ax.set(xlabel='time (s)', ylabel='position',
+       title='sensor1 data')
+ax.grid()
+
+fig.savefig("test.png")
+plt.show()
 
 
 
