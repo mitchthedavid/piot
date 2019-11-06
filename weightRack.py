@@ -63,7 +63,7 @@ while True: # Run forever
 	except Exception as e:
 		file = open("errors.json", 'a+')
 		print(str(e))
-		file.app(str(e)+str(datetime.now))
+		file.app(str(e))
 		file.close()
 
 #time.sleep(5)
