@@ -9,8 +9,10 @@ sudo apt update && sudo apt-get install -y git python3-pip python3
 sudo pip3 install adafruit-io 
 
 
-#clone the repository, run the initial set command
-sudo git clone https://www.github.com/mitchpehora/piot && sudo python3 piot/initialSetup.py
+#clone the repository, run the initial setup command
+sudo git clone https://www.github.com/mitchpehora/piot
+cd piot
+sudo python3 piot/initalSetup.py
 
 #run the rack
-sudo piot/weightRack.py
+python3 weightRack.py
