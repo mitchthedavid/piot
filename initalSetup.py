@@ -2,9 +2,8 @@
 
 #install dependencies
 import os
-""" os.('sudo apt-get install -y git python3-pip python3-gpiozero adafruit-io')"""
-os.('pip3 install adafruit-io') 
-os.('sudo mkdir data') 
+#""" os.('sudo apt-get install -y git python3-pip python3-gpiozero adafruit-io')"""
+
 
 validType=False
 validNumber=False
