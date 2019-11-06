@@ -62,7 +62,8 @@ while True: # Run forever
 				GPIO.output(outPins[i], GPIO.HIGH) # Turn off
 	except Exception as e:
 		file = open("errors.json", 'w')
-		file.write(e)
+		print(str(e))
+		file.write(str(e)
 		file.close()
 
 time.sleep(5)
