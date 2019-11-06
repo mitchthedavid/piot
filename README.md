@@ -15,4 +15,4 @@ cd piot
 sudo python3 piot/initalSetup.py
 
 #run the rack
-python3 weightRack.py
+sudo python3 weightRack.py

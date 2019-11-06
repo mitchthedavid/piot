@@ -61,9 +61,9 @@ while True: # Run forever
 				aio.send(digital.key, 0)
 				GPIO.output(outPins[i], GPIO.HIGH) # Turn off
 	except Exception as e:
-		file = open("errors.json", 'w')
+		file = open("errors.json", 'a+')
 		print(str(e))
-		file.write(str(e))
+		file.app(str(e)+str(datetime.now))
 		file.close()
 
 #time.sleep(5)
