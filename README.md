@@ -5,13 +5,12 @@
 
 
 #GPIO SUPPORT, PYTHON ESSENTIALS, ADAFRUIT
-sudo apt update
-sudo apt-get install -y git python3-pip python3 #VC and python essentials
-sudo pip3 install os python3-gpiozero adafruit-io #python packages
+sudo apt update && sudo apt-get install -y git python3-pip python3
+sudo pip3 install adafruit-io 
 
 
 #clone the repository, run the initial set command
-sudo clone https://www.github.com/mitchpehora/piot && sudo python3 piot/initialSetup.py
+sudo git clone https://www.github.com/mitchpehora/piot && sudo python3 piot/initialSetup.py
 
 #run the rack
 sudo piot/weightRack.py
