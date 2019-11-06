@@ -4,7 +4,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
-
+#open the config files and get the username and key for ADA
 try:
 	with open('./data/configData.json') as json_file:
 		sensorConfigData=json.load(json_file)
@@ -20,50 +20,35 @@ key=adafruitConfigData['adafruitInfo'][0]['key']
 
 print("connecting to adafruit")
 
+
 from Adafruit_IO import Client, Feed, RequestError
+#log into adafruit
 aio = Client(username,key)
-feeds=aio.feeds()
+feeds=aio.feeds() #grabs a list of feeds that you have
 print("connected to adafruit...")
-
-
-
-myData=[]
+feedList=[]#holds the feeds
+downloadedData=[] #hold the data
 for feed in feeds:
-	print(feed.key)
-	
-""" url = 'https://jsonplaceholder.typicode.com/todos/1' 
-response = requests.get(url)        # To execute get request 
-print(response.status_code)     # To print http response code  
-print(response.text)            # To print formatted JSON response 
+	feedKey=feed.key
+	feedList.append(feedKey)
+	print(str(feedKey)+str(feed))
+	#run a request to get the data for each feed
+	url = "https://io.adafruit.com//api/v2/mitchdavid/feeds/"+str(feedKey)+"/data"
+	response = requests.get(url)        # To execute get request 
+	downloadedData.append(json.loads(response.text)) #load the data
+for feed in downloadedData:
+	print(feed)
 
-file = open("adaresults.txt", 'w')
-file.write(response.text)
-file.close() """
-
-url = "https://io.adafruit.com//api/v2/mitchdavid/feeds/piot.sensor1/data"
-response = requests.get(url)        # To execute get request 
-print(response.status_code)     # To print http response code  
-#print(response.text)            # To print formatted JSON response 
-
-sensor1data=json.loads(response.text)
-#print (sensor1data[0])
-keysList=[]
-downloadedData=keysList
-for i in sensor1data[0]:
-	keysList.append(i)
-
-values=[]
+print("exit")
+""" values=[]
 timestamps=[]
 for point in sensor1data:
 	values.append(point['value'])
-	timestamps.append(point['created_at'])
+	timestamps.append(point['created_at']) """
 	
 
-#print (values,timestamps)
+""" print (values,timestamps)
 # Data for plotting
-t = np.arange(0.0, 2.0, 0.01)
-s = 1 + np.sin(2 * np.pi * t)
-
 fig, ax = plt.subplots()
 ax.plot(timestamps, values)
 
@@ -72,7 +57,7 @@ ax.set(xlabel='time (s)', ylabel='position',
 ax.grid()
 
 fig.savefig("test.png")
-plt.show()
+#plt.show() """
 
 
 
