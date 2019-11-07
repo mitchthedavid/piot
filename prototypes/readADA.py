@@ -31,13 +31,23 @@ downloadedData=[] #hold the data
 for feed in feeds:
 	feedKey=feed.key
 	feedList.append(feedKey)
-	print(str(feedKey)+str(feed))
+	
 	#run a request to get the data for each feed
 	url = "https://io.adafruit.com//api/v2/mitchdavid/feeds/"+str(feedKey)+"/data"
 	response = requests.get(url)        # To execute get request 
-	downloadedData.append(json.loads(response.text)) #load the data
-for feed in downloadedData:
-	print(feed)
+	downloadedData.append(response.content) #load the data
+
+	
+#convert the data to json
+for i in range(len(downloadedData)):
+	downloadedData[i]=json.loads(downloadedData[i])
+keyList=[]
+for key in downloadedData[0][0].keys():
+	keyList.append(str(key))
+	#for j in range(len(downloadedData[i])):
+		#print (downloadedData[i][j]['value'])
+	
+
 
 print("exit")
 """ values=[]
