@@ -108,7 +108,7 @@ for i in range(numFeeds): #each feed
 	numPoints.append(len(downloadedData[i]))
 	ax.plot(*zip(*values[i]),colors[i%len(colors)])
 
-#df.plot(ax=ax)#kind='line',x='time',y='value',)
+df.plot(ax=ax)#kind='line',x='time',y='value',)
 
 
 ax.set(xlabel='time (s)', ylabel='position',title='Weight Rack Data')

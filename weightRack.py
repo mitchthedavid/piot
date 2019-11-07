@@ -4,6 +4,7 @@ import json
 import time
 import os
 from datetime import datetime
+import Adafruit_IO
 
 inPins=[7,11,13,15,19,21,23]
 outPins=[8,10,12,14,16,18,22]
