@@ -1,7 +1,7 @@
 # piot
 series of scripts for streamlining the use of an rpi as an IoT device for data collection and monitoring
 
-
+##installing dependendies
 sudo apt update && sudo apt-get install -y git python3-pip python3
 pip3 install adafruit-io
 pip3 install datetime
