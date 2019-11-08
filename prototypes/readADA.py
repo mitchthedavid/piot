@@ -106,7 +106,7 @@ colors=["r","g","b"]
 
 for i in range(numFeeds): #each feed
 	numPoints.append(len(downloadedData[i]))
-	ax.plot(*zip(*values[i]),colors[i%len(colors)])
+	#ax.plot(*zip(*values[i]),colors[i%len(colors)])
 
 df.plot(ax=ax)#kind='line',x='time',y='value',)
 

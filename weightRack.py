@@ -9,9 +9,9 @@ import Adafruit_IO
 inPins=[7,11,13,15,19,21,23]
 outPins=[8,10,12,14,16,18,22]
 try:
-	with open('./data/configData.json') as json_file:
+	with open('home/pi/piot/data/configData.json') as json_file:
 		sensorConfigData=json.load(json_file)
-	with open('./data/adafruitCredentials.json') as json_file:
+	with open('home/pi/piot/data/adafruitCredentials.json') as json_file:
 		adafruitConfigData=json.load(json_file)
 except:
 		print("no config data found...\nexiting....")
@@ -52,6 +52,7 @@ GPIO.setup(outPins[0:numSensors], GPIO.OUT, initial=GPIO.HIGH) #initalize output
 os.system('pinout')
 print("starting listening for sensor input")
 while True: # Run forever
+	time.sleep(5)
 	try:
 		for i in range (0, numSensors):
 			digital = aio.feeds('piot.sensor'+str(i+1))
@@ -68,4 +69,4 @@ while True: # Run forever
 		file.write(str(e))
 		file.close()
 
-time.sleep(5)
+
