@@ -9,9 +9,9 @@ import Adafruit_IO
 inPins=[7,11,13,15,19,21,23]
 outPins=[8,10,12,14,16,18,22]
 try:
-	with open('home/pi/piot/data/configData.json') as json_file:
+	with open('./data/configData.json') as json_file:
 		sensorConfigData=json.load(json_file)
-	with open('home/pi/piot/data/adafruitCredentials.json') as json_file:
+	with open('./data/adafruitCredentials.json') as json_file:
 		adafruitConfigData=json.load(json_file)
 except:
 		print("no config data found...\nexiting....")
