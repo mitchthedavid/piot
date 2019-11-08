@@ -4,10 +4,7 @@ series of scripts for streamlining the use of an rpi as an IoT device for data c
 ## installing dependendies
 ```
 sudo apt update && sudo apt-get install -y git python3-pip python3
-sudo pip3 install adafruit-io
-sudo pip3 install datetime
-sudo pip3 install RPi.GPIO
-sudo pip3 install os
+sudo pip3 install adafruit-io, datetime, RPi.GPIO, os
 ```
 ## download the piot respository and configure
 ```
