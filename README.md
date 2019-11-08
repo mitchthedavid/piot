@@ -31,5 +31,6 @@ sudo nano /home/pi/.bashrc
 ```
 add the following to the end of the file
 ```
-sudo python /home/pi/piot/weightRack.py
+cd /home/pi/piot
+sudo python3 weightRack.py
 ```
