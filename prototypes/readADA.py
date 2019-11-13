@@ -79,7 +79,6 @@ time = [*zip(*allData)][0]#series of time
 value = [*zip(*allData)][1]#series of value
 # Create an empty dataframe
 df = pd.DataFrame()
-
 # Create a column from the datetime variable
 df['datetime'] = time
 # Convert that column into a datetime datatype
