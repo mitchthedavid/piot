@@ -51,8 +51,10 @@ GPIO.setup(outPins[0:numSensors], GPIO.OUT, initial=GPIO.HIGH) #initalize output
 #start listening for input
 os.system('pinout')
 print("starting listening for sensor input")
+
 while True: # Run forever
 	time.sleep(5)
+	sensorData=[]
 	try:
 		for i in range (0, numSensors):
 			digital = aio.feeds('piot.sensor'+str(i+1))
@@ -60,9 +62,13 @@ while True: # Run forever
 			if GPIO.input(inPins[i]) == GPIO.LOW:
 				GPIO.output(outPins[i], GPIO.LOW) # Turn on
 				aio.send(digital.key, 1)
+				sensorData.append(1)
 			else:
 				aio.send(digital.key, 0)
 				GPIO.output(outPins[i], GPIO.HIGH) # Turn off
+				sensorData.append(0)
+		digital = aio.feeds('piot.allSensors')
+		aio.send(digital.key, sum(sensorData))
 	except Exception as e:
 		file = open("errors.json", 'a+')
 		print(str(e))
