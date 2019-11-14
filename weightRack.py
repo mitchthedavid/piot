@@ -53,7 +53,7 @@ os.system('pinout')
 print("starting listening for sensor input")
 
 while True: # Run forever
-	time.sleep(5)
+	#time.sleep(5)
 	sensorData=[]
 	try:
 		for i in range (0, numSensors):
@@ -70,7 +70,7 @@ while True: # Run forever
 		digital = aio.feeds('piot.allsensors')
 		aio.send(digital.key, numSensors-sum(sensorData))
 		digital = aio.feeds('piot.string')
-		aio.send(digital.key, 'Last Updated on '+str(datetime.now())
+		aio.send(digital.key, 'Last Updated on '+str(datetime.now())[:16])
 		print(datetime.now())
 	except Exception as e:
 		file = open("errors.json", 'a+')
