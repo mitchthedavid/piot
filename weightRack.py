@@ -67,8 +67,11 @@ while True: # Run forever
 				aio.send(digital.key, 0)
 				GPIO.output(outPins[i], GPIO.HIGH) # Turn off
 				sensorData.append(0)
-		digital = aio.feeds('piot.allSensors')
-		aio.send(digital.key, sum(sensorData))
+		digital = aio.feeds('piot.allsensors')
+		aio.send(digital.key, numSensors-sum(sensorData))
+		digital = aio.feeds('piot.string')
+		aio.send(digital.key, 'Last Updated on '+str(datetime.now())
+		print(datetime.now())
 	except Exception as e:
 		file = open("errors.json", 'a+')
 		print(str(e))
