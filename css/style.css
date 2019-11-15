@@ -11,7 +11,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "Lora", serif;
+  font-family: "Quicksand", serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.9;
@@ -47,13 +47,13 @@ body {
 }
 
 a {
-  color: #52D681;
+  color: rgb(255, 0, 0);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #52D681;
+  color: rgb(255, 0, 0);
   outline: none;
   text-decoration: none;
 }
@@ -71,17 +71,17 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #52D681;
+  background: rgb(255, 0, 0);
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #52D681;
+  background: rgb(255, 0, 0);
 }
 
 ::selection {
   color: #fff;
-  background: #52D681;
+  background: rgb(255, 0, 0);
 }
 
 .gtco-container {
@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: absolute;
   top: 40px;
   left: 0;
-  text-align: left;
+  text-align: center;
   background: #000;
   padding: 20px;
   -webkit-border-radius: 4px;
@@ -239,7 +239,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #000;
 }
 .gtco-nav ul li.btn-cta a {
-  color: #52D681;
+  color: rgb(255, 0, 0);
 }
 .gtco-nav ul li.btn-cta a span {
   background: #fff;
@@ -279,7 +279,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #000 !important;
 }
 .gtco-social a:hover, .gtco-social a:focus, .gtco-social a:active, .gtco-social li a:hover, .gtco-social li a:focus, .gtco-social li a:active {
-  color: #52D681 !important;
+  color: rgb(255, 0, 0) !important;
 }
 
 #gtco-intro h2 {
@@ -287,7 +287,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 0;
   line-height: 1.2;
   font-size: 50px;
-  font-family: "Lora", serif;
+  font-family: "Quicksand", serif;
 }
 @media screen and (max-width: 480px) {
   #gtco-intro h2 {
@@ -296,7 +296,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 #gtco-intro .sub {
-  font-family: "Lora", serif;
+  font-family: "Quicksand", serif;
 }
 #gtco-intro .dtc {
   min-height: 700px;
@@ -311,9 +311,9 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(top right, #52D681, #1FDEDB);
-  background: -webkit-gradient(linear, right top, left bottom, from(#52D681), to(#1FDEDB));
-  background: linear-gradient(top right, #52D681, #1FDEDB);
+  background: -webkit-linear-gradient(top right, rgb(255, 0, 0), rgb(0, 0, 0));
+  background: -webkit-gradient(linear, right top, left bottom, from(rgb(255, 0, 0)), to(rgb(0, 0, 0)));
+  background: linear-gradient(top right, rgb(255, 0, 0), rgb(0, 0, 0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
@@ -370,7 +370,7 @@ h1, h2, h3, h4, h5, h6, figure {
   float: left;
 }
 #gtco-project .desc {
-  font-family: "Lora", serif;
+  font-family: "Quicksand", serif;
   font-size: 20px;
   line-height: 1.5;
 }
@@ -414,9 +414,9 @@ h1, h2, h3, h4, h5, h6, figure {
   right: 0;
   top: 0;
   z-index: 8;
-  background: -webkit-linear-gradient(top right, #52D681, #1FDEDB);
-  background: -webkit-gradient(linear, right top, left bottom, from(#52D681), to(#1FDEDB));
-  background: linear-gradient(top right, #52D681, #1FDEDB);
+  background: -webkit-linear-gradient(top right, rgb(255, 0, 0), rgb(0, 0, 0));
+  background: -webkit-gradient(linear, right top, left bottom, from(rgb(255, 0, 0)), to(rgb(0, 0, 0)));
+  background: linear-gradient(top right, rgb(255, 0, 0), rgb(0, 0, 0));
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -520,7 +520,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #000;
 }
 #fh5co-footer a:hover, #fh5co-footer a:active, #fh5co-footer a:focus {
-  color: #52D681;
+  color: rgb(255, 0, 0);
 }
 #fh5co-footer .fh5co-footer-widget {
   float: left;
@@ -539,11 +539,11 @@ h1, h2, h3, h4, h5, h6, figure {
   *display: inline;
 }
 #fh5co-footer .gtco-social-wrap {
-  text-align: right;
+  text-align: center;
 }
 @media screen and (max-width: 992px) {
   #fh5co-footer .gtco-social-wrap {
-    text-align: left !important;
+    text-align: center !important;
   }
 }
 
@@ -676,9 +676,9 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .btn-primary {
-  background: #52D681;
+  background: rgb(255, 0, 0);
   color: #fff;
-  border: 2px solid #52D681 !important;
+  border: 2px solid rgb(255, 0, 0) !important;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #67db90 !important;
@@ -686,11 +686,11 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #52D681;
-  border: 2px solid #52D681;
+  color: rgb(255, 0, 0);
+  border: 2px solid rgb(255, 0, 0);
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #52D681;
+  background: rgb(255, 0, 0);
   color: #fff;
 }
 
@@ -791,37 +791,37 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .btn-gradient {
-  background: -webkit-linear-gradient(top right, #52D681, #1FDEDB);
-  background: -webkit-gradient(linear, right top, left bottom, from(#52D681), to(#1FDEDB));
-  background: linear-gradient(top right, #52D681, #1FDEDB);
+  background: -webkit-linear-gradient(top right, rgb(255, 0, 0), rgb(0, 0, 0));
+  background: -webkit-gradient(linear, right top, left bottom, from(rgb(255, 0, 0)), to(rgb(0, 0, 0)));
+  background: linear-gradient(top right, rgb(255, 0, 0), rgb(0, 0, 0));
   color: rgba(255, 255, 255, 0.7);
   border: none !important;
 }
 .btn-gradient:hover, .btn-gradient:focus, .btn-gradient:active {
   color: #fff;
-  background: -webkit-linear-gradient(top right, #52D681, #1FDEDB);
-  background: -webkit-gradient(linear, right top, left bottom, from(#52D681), to(#1FDEDB));
-  background: linear-gradient(top right, #52D681, #1FDEDB);
+  background: -webkit-linear-gradient(top right, rgb(255, 0, 0), rgb(0, 0, 0));
+  background: -webkit-gradient(linear, right top, left bottom, from(rgb(255, 0, 0)), to(rgb(0, 0, 0)));
+  background: linear-gradient(top right, rgb(255, 0, 0), rgb(0, 0, 0));
 }
 
 .btn-special {
-  background: #52D681;
+  background: rgb(255, 0, 0);
   color: #2f9051;
-  border: 2px solid #52D681;
+  border: 2px solid rgb(255, 0, 0);
 }
 .btn-special:hover, .btn-special:focus, .btn-special:active {
   color: #fff;
-  background: #52D681;
-  border-color: #52D681;
+  background: rgb(255, 0, 0);
+  border-color: rgb(255, 0, 0);
 }
 .btn-special.btn-outline {
   color: #fff;
-  border: 2px solid #52D681;
+  border: 2px solid rgb(255, 0, 0);
 }
 .btn-special.btn-outline:hover, .btn-special.btn-outline:focus, .btn-special.btn-outline:active {
   background: #fff;
   color: #2f9051;
-  border: 2px solid #52D681;
+  border: 2px solid rgb(255, 0, 0);
 }
 
 .btn-outline {
@@ -874,7 +874,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #52D681;
+  border-color: rgb(255, 0, 0);
 }
 
 .row-pb-md {
