@@ -53,7 +53,7 @@ os.system('pinout')
 print("starting listening for sensor input")
 
 while True: # Run forever
-	#time.sleep(5)
+	time.sleep(5)
 	sensorData=[]
 	try:
 		for i in range (0, numSensors):

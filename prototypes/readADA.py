@@ -64,7 +64,7 @@ for key in downloadedData[0][0].keys():
 #sorted contains all the ordered pairs
 allData=[]
 d = defaultdict(int) #not sure what this does
-for i in range(numFeeds): #each feed
+for i in range(numFeeds-1): #each feed
 	numPoints=len(downloadedData[i])
 	for j in range(numPoints):#each point in that feed
 		value=float(downloadedData[i][j]['value'])
@@ -105,9 +105,9 @@ colors=["r","g","b"]
 
 for i in range(numFeeds): #each feed
 	numPoints.append(len(downloadedData[i]))
-	#ax.plot(*zip(*values[i]),colors[i%len(colors)])
+	ax.plot(*zip(*values[i]),colors[i%len(colors)])
 
-df.plot(ax=ax)#kind='line',x='time',y='value',)
+#df.plot(ax=ax)#kind='line',x='time',y='value',)
 
 
 ax.set(xlabel='time (s)', ylabel='position',title='Weight Rack Data')
