@@ -11,6 +11,8 @@ acknowledgement. I have not made my work available to anyone else. -->
 body {font-family: 'Quicksand', sans-serif;} 
 h1, h2 {color:rgb(255, 8, 8)} 
 div{display:flex;justify-content:center;align-items:center;margin: 10px;page-break-after: auto}
+code{background-color: rgba(192, 192, 192, 0.548); padding: 20px;padding-top: 10px;padding-bottom: 10px}
+footer{padding-top: 8%;color: rgba(255, 8, 8, 0.479)}
 </style> 
 </head> 
 
@@ -18,28 +20,38 @@ div{display:flex;justify-content:center;align-items:center;margin: 10px;page-bre
 
 
  
-<div style="padding-top: 15%;">
+<div style="padding-top: 10%;">
 <h1 style="font-size: 500%">PIoT</h1>
 </div>
 
 <div>
-<a style="font-size: 100%">an experiment in standardizing data collection over IoT on the Pi</a>
+<a style="font-size: 200%">an experiment in standardizing data collection over IoT on the Pi</a>
 </div>
 
 
 
 <div>
-<a href="test">github</a><br>
+<a href="https://github.com/mitchpehora/piot", style="font-size: 150%">github</a><br>
 </div>
 
 <div>
-<a href="test">data dashboard</a><br>
+<a href="https://io.adafruit.com/mitchdavid/dashboards/weight-rack", style="font-size: 150%">data dashboard</a><br><br>
 </div>
 
+<div>
+<code>
+sudo pip3 install adafruit-io datetime RPi.GPIO os<br>
+sudo git clone https://www.github.com/mitchpehora/piot<br>
+cd piot && sudo python3 initalSetup.py<br>
+</code>
+</div>
 
 
 
 
 
 </body> 
+<footer>
+        <i>Alex Gablenz, Alec Greco, Mitchell Pehora - 2019</i>
+      </footer>
 </html>
