@@ -7,14 +7,6 @@ outPins=[8,10,12,14,16,18,22]
 
 numSensors=3
 
-try:
-	with open('configData.txt') as json_file:
-		sensorConfigData=json.load(json_file)
-	with open('adafruitData.txt') as json_file:
-		adafruitConfigData=json.load(json_file)
-except:
-		print("no config data found...\nexiting....")
-		exit()
 
 numSensors=3
 print(str(numSensors)+" sensors...") #'['number'])
