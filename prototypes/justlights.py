@@ -4,7 +4,30 @@ import json
 import time
 inPins=[7,11,13,15,19,21,23]
 outPins=[8,10,12,14,16,18,22]
+
 numSensors=3
+
+try:
+	with open('configData.txt') as json_file:
+		sensorConfigData=json.load(json_file)
+	with open('adafruitData.txt') as json_file:
+		adafruitConfigData=json.load(json_file)
+except:
+		print("no config data found...\nexiting....")
+		exit()
+
+numSensors=3
+print(str(numSensors)+" sensors...") #'['number'])
+
+#start configuring gpio pins
+GPIO.setwarnings(False) # Ignore warning for now
+GPIO.setmode(GPIO.BOARD) # Use physical pin numbering
+for i in range(0, numSensors):
+	print("initializing sensor " +str(i+1) + " to pin " +str(inPins[i]))
+	
+	print("initializing indicator " +str(i+1) + " to pin " +str(outPins[i])+"\n\n")
+	
+
 GPIO.setup(inPins[0:numSensors], GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #initialize sensor pin
 GPIO.setup(outPins[0:numSensors], GPIO.OUT, initial=GPIO.HIGH) #initalize output pin
 
