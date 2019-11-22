@@ -5,7 +5,7 @@ import time
 inPins=[7,11,13,15,19,21,23]
 outPins=[8,10,12,14,16,18,22]
 
-print("initializing sensor " +str(i+1) + " to pin " +str(inPins[i]))
+
 	
 
 	
@@ -17,6 +17,7 @@ print("starting listening for sensor input")
 while True: # Run forever
     
 	for i in range (0, 4):
+		print("initializing sensor " +str(i+1) + " to pin " +str(inPins[i]))
 		#digital = aio.feeds('piot.sensor'+str(i+1))
 		#if GPIO.input(inPins[i]) == GPIO.LOW:
 		GPIO.output(outPins[i], GPIO.HIGH) # Turn on
