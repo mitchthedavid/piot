@@ -11,12 +11,12 @@ outPins=[8,10,12,14,16,18,22]
 	
 GPIO.setup(inPins[0:numSensors], GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #initialize sensor pin
 GPIO.setup(outPins[0:numSensors], GPIO.OUT, initial=GPIO.HIGH) #initalize output pin
-
+numSensors=3
 #start listening for input
 print("starting listening for sensor input")
 while True: # Run forever
     
-	for i in range (0, 4):
+	for i in range (0, numSensors):
 		print("initializing sensor " +str(i+1) + " to pin " +str(inPins[i]))
 		#digital = aio.feeds('piot.sensor'+str(i+1))
 		#if GPIO.input(inPins[i]) == GPIO.LOW:
