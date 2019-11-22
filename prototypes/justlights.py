@@ -4,14 +4,10 @@ import json
 import time
 inPins=[7,11,13,15,19,21,23]
 outPins=[8,10,12,14,16,18,22]
-
-
-	
-
-	
+numSensors=3
 GPIO.setup(inPins[0:numSensors], GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #initialize sensor pin
 GPIO.setup(outPins[0:numSensors], GPIO.OUT, initial=GPIO.HIGH) #initalize output pin
-numSensors=3
+
 #start listening for input
 print("starting listening for sensor input")
 while True: # Run forever
