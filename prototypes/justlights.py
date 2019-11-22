@@ -16,7 +16,7 @@ GPIO.setup(outPins[0:numSensors], GPIO.OUT, initial=GPIO.HIGH) #initalize output
 print("starting listening for sensor input")
 while True: # Run forever
     
-	for i in range (0, numSensors):
+	for i in range (0, 4):
 		#digital = aio.feeds('piot.sensor'+str(i+1))
 		#if GPIO.input(inPins[i]) == GPIO.LOW:
 		GPIO.output(outPins[i], GPIO.HIGH) # Turn on
