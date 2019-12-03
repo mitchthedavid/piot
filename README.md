@@ -31,7 +31,7 @@ python3 initalSetup.py
 ## configure adafruit
 Create a feed for each boolean (on/off or high/low) sensor you intend to use. use the following notation:<br/>
 ![adafruit configuration](https://raw.githubusercontent.com/mitchpehora/piot/master/images/adaFruitFeedConfiguration.png)
-Each sensor belongs to a feed group called piot.<br/>
+<br/>Each sensor belongs to a feed group called piot.<br/>
 
 ## running the weight rack
 ```
